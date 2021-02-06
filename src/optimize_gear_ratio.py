@@ -1,9 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys
 
 class Gearbox:
-  
   def __init__(self, min_teeth, max_teeth, stages, target_ratio):
     self.stages = stages
     self.min_teeth = min_teeth
@@ -16,7 +15,6 @@ class Gearbox:
   def optimize(self):
     self.loop(self.min_teeth, self.max_teeth, [0 for i in range(self.stages*2)], self.stages*2)
     return
-
 
   def loop(self, min, max, current_index, loop_counter):
     if (loop_counter == 0):
